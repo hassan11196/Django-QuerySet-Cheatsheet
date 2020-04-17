@@ -126,14 +126,10 @@ Entry.objects.filter(status__in=['Hung over', 'Sober', 'Drunk'])
  * [FilteredRelation() objects](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#filteredrelation-objects)
 
 - - -
-
-
 ---
 title: Django - Queries - Cheat sheet
-undefined: Django quires cheat sheet and complex queires by example
-created_date: 2018-01-16 18:30:00 +0000
-date: 2018-01-28 01:34:06 +0000
 ---
+
  **Queryset** can be constructed, filtered, sliced, and generally passed around without actually hitting the database. No database activity actually occurs until you do something to evaluate the queryset.
 
 Querysets are evaluated when
@@ -154,10 +150,10 @@ Querysets are evaluated when
   >>> from django.db.models import Count
   >>> q = Blog.objects.annotate(Count('entry'))
   \# The name of the first blog
-  >>> q\[0\].name
+  >>> q[0].name
   \'Blogasaurus'
   \# The number of entries on the first blog
-  >>> q\[0\].entry__count
+  >>> q[0].entry__count
   42
 ```
 
